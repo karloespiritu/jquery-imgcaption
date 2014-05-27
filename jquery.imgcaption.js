@@ -22,9 +22,7 @@
 
     return this.each(function() {
       var $this = $(this),   //Store  object
-          caption = "",
-          source_name = "",
-          source_url = "";
+          caption = "";
 
       if (this.nodeName === "IMG" && $this.data("caption"))
       {
@@ -32,8 +30,6 @@
       } else {
         caption = "";
       }
-
-      //$this.data("caption", caption);
 
       // mouseenter handler
       $this.mouseenter(function() {
@@ -45,15 +41,15 @@
         if (!$(".image-caption").length) {
           $("<div class='image-caption'></div>")
               .appendTo("body")
-              .css("position", "absolute")
+              .css("background-color", "rgba(255,255,255,0.7)")
+              .css("border-radius", "0px")
+              .css("color", "rgba(0,0,0,0.6)")
               .css("font-size", "12px")
               .css("font-style", "italic")
               .css("line-height", "1.4")
-              .css("color", "rgba(0,0,0,0.6)")
-              .css("z-index","9999")
               .css("padding", "1px 5px 1px 5px")
-              .css("background-color", "rgba(255,255,255,0.7)")
-              .css("border-radius", "0px");     
+              .css("position", "absolute")
+              .css("z-index","9999");     
         }
 
         // add caption content to div
@@ -63,9 +59,8 @@
               .css("top", (pos_y - $(".image-caption").height() - 2 )+"px")
               .fadeIn(defaults.showSpeed);
               
-
         clearTimeout($(".image-caption").data("hide-timeout"));
-      });
+      }); //end mouseenter
   
       // mouseleave handler
       $this.mouseleave(function() {
@@ -77,7 +72,7 @@
             }, 
             defaults.hideTimeout)
         );
-      });
+      }); //end mouseleave
     }); //end each
   };
 })(jQuery, window, document );
