@@ -1,7 +1,7 @@
 {
   "name": "imgcaption",
-  "version": "0.0.1",  
-  "title": "Image Caption - A lightweight Image Caption jQuery Plugin",
+  "version": "1.0.0",  
+  "title": "Image Caption - A simple Image Caption jQuery Plugin",
   "description": "A simple image caption jQuery plugin.",
   "author": "Karlo Espiritu",
   "homepage": "https://github.com/karloespiritu/jquery-imgcaption/",

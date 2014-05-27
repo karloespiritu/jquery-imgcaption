@@ -11,8 +11,7 @@
   $.fn.imgcaption = function(options) {
     //set the default options
     var defaults = {
-        format      : "Source: <a href='%source_url%'>%source%</a>",
-        hideTimeout : 1000,
+        hideTimeout : 1200,
         showSpeed   : "fast",
         hideSpeed   : "slow"
     };
@@ -23,28 +22,25 @@
 
     return this.each(function() {
       var $this = $(this),   //Store  object
+          caption = "",
           source_name = "",
           source_url = "";
 
-
-      if (this.nodeName === "IMG" && ($this.data("source") || $this.data("source-url")))
+      if (this.nodeName === "IMG" && $this.data("caption"))
       {
-        source_name = $this.data("source");
-        source_url = $this.data("source-url");
+        caption = $this.data("caption");
       } else {
-        source_url = "";
-        source_name = "";
+        caption = "";
       }
 
-      $this.data("source_name", source_name);
-      $this.data("source_url", source_url);
+      //$this.data("caption", caption);
 
       // mouseenter handler
       $this.mouseenter(function() {
 
         var image_offset = $(this).offset(),
-            pos_x = image_offset.left + $(this).width() - 5,
-            pos_y = image_offset.top + $(this).height() - 5;
+            pos_x        = image_offset.left + $(this).width(),
+            pos_y        = image_offset.top + $(this).height();
 
         if (!$(".image-caption").length) {
           $("<div class='image-caption'></div>")
@@ -55,27 +51,18 @@
               .css("line-height", "1.4")
               .css("color", "rgba(0,0,0,0.6)")
               .css("z-index","9999")
-              .css("padding", "1px 8px 1px 8px")
-              .css("background-color", "rgba(255,255,255,0.6)")
-              .css("border-radius", "10px");     
+              .css("padding", "1px 5px 1px 5px")
+              .css("background-color", "rgba(255,255,255,0.7)")
+              .css("border-radius", "0px");     
         }
 
-        // add image caption content to div
+        // add caption content to div
         $(".image-caption")
-              .html(defaults.format.split("%source%").join($.data(this, "source_name"))
-              .split("%source_url%")
-              .join($.data(this, "source_url")));
-
-        // if url is empty, remove anchor tag
-        if (!$.data(this, "source_url")) {
-          $("a", ".image-caption").replaceWith($("a", ".image-caption").contents());
-        } 
-
-        // show image caption div  
-        $(".image-caption")
-              .css("left", (pos_x - $(".image-caption").width() - 16 )+"px")
+              .html(caption)
+              .css("left", (pos_x - $(".image-caption").width() - 10 )+"px")
               .css("top", (pos_y - $(".image-caption").height() - 2 )+"px")
               .fadeIn(defaults.showSpeed);
+              
 
         clearTimeout($(".image-caption").data("hide-timeout"));
       });

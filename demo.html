@@ -23,24 +23,25 @@
   </section>
   <section>
   <h3>No data-source &amp; data-url</h3>
-  <img src="images/dinos.jpg" alt="Dinos" width="756" height="578" data-source="karloespiritu.com">
+  <img src="images/dinos.jpg" alt="Dinos" width="756" height="578" data-caption="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, iure cupiditate dolorem alias consectetur.">
   <hr>
   <h3>Only data-source</h3>
   <img class="photo" alt="Arch Entrance" 
        src="images/arch.jpg"
-       data-source="Karlo Espiritu">
+       data-caption="Image credit: Karlo Espiritu <a href='http://karloespiritu.com'>Instagram</a>">
   <hr>
   <h3>With data-source but without data-source-url</h3>
   <img class="photo" alt="Coffins" 
        src="images/coffins.jpg"
-       data-source="Karlo Espiritu" data-source-url="http://instagram.com/karloespiritu">
+       data-caption="Karlo Espiritu" data-source-url="http://instagram.com/karloespiritu">
   </section>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="jquery.imgcaption.min.js"></script>
+<script src="jquery.min.js"></script>
+<script src="jquery.imgcaption.js"></script>
 <script>
      $(function(){
          $('img').imgcaption();           
      });
 </script>
+
 </body>
 </html>
