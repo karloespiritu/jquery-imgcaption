@@ -6,11 +6,11 @@
   <title>Image Captio jQuery Plugin Demo</title>
   <style>
     body {
-      text-align: center;
+      width: 970px;
+      margin: auto;
       color: black;
       background-color: #eee;
       padding: 0;
-      margin: 0;
       font-family: font-family: Georgia, Times, "Times New Roman", serif;
       font-size: 16px;
     }
@@ -23,23 +23,30 @@
   </section>
   <section>
   <h3>No data-source &amp; data-url</h3>
-  <img src="images/dinos.jpg" alt="Dinos" width="756" height="578" data-caption="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, iure cupiditate dolorem alias consectetur.">
-  <hr>
+  <div>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quia qui tenetur repudiandae nihil aspernatur adipisci magnam facere! Mollitia, minus fugit aut perferendis animi ullam numquam esse vero nesciunt quasi! <img class="caption" src="images/dinos.jpg" alt="Dinos" width="756" height="578" data-caption="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, iure cupiditate dolorem.">
+    </p>
+  
+  </div>
   <h3>Only data-source</h3>
-  <img class="photo" alt="Arch Entrance" 
+  <div> 
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quia qui tenetur repudiandae nihil aspernatur adipisci magnam facere! Mollitia, minus fugit aut perferendis animi ullam numquam esse vero nesciunt quasi!
+  <img class="caption" alt="Arch Entrance" 
        src="images/arch.jpg"
        data-caption="Image credit: Karlo Espiritu <a href='http://karloespiritu.com'>Instagram</a>">
-  <hr>
+    </p>   
+  </div>
   <h3>With data-source but without data-source-url</h3>
   <img class="photo" alt="Coffins" 
-       src="images/coffins.jpg"
-       data-caption="Karlo Espiritu" data-source-url="http://instagram.com/karloespiritu">
+       src="images/coffins.jpg">
   </section>
 <script src="jquery.min.js"></script>
 <script src="jquery.imgcaption.js"></script>
 <script>
      $(function(){
-         $('img').imgcaption();           
+         $('img').imgcaption({
+          'backgroundColor': "rgba(128,128,128,0.4)"
+         });           
      });
 </script>
 
