@@ -12,7 +12,8 @@
 
     var settings = $.extend({
             backgroundColor: "#eee",
-            textColor: "#444",
+            textColor: "#333",
+            fontSize: ".8em",
             fontStyle: "italic",
     }, options);
 
@@ -20,32 +21,32 @@
             
             var $this = $(this); 
                 caption = $this.data('caption'), 
-                classList = $this.attr('class'),  
-                inlineStyles = $this.attr('style'), 
+                imgClass = $this.attr('class'),  
+                imgStyle = $this.attr('style'), 
                 imgWidth = $this.width(); 
 
             $this.removeAttr('class'); 
             $this.removeAttr('style'); 
 
             if (caption) {
-                $newFigure = $this.wrap('<figure></figure>').parent(); 
+                $figure = $this.wrap('<figure></figure>').parent(); 
                 $this.after('<figcaption>' + caption + '</figcaption>');
-                $newFigure
+                $figure
                     .css({
                     "background-color" : settings.backgroundColor,    
                     "display" : "inline-block",
                     "color": settings.textColor,
-                    "font-size": "13px",
+                    "font-size": settings.fontSize,
                     "font-style": settings.fontStyle,
-                    "line-height": "1.2",
-                    "text-align": "right"})
-                    .addClass(classList)
-                    .attr('style', inlineStyles)
+                    "text-align": "right",
+                    "margin-bottom": "10px"})
+                    .addClass(imgClass)
+                    .attr('style', imgStyle)
                     .width(imgWidth)
-                    .parent('p').before($newFigure); 
+                    .parent('p').before($figure); 
 
                 $("figcaption")
-                    .css({"padding":"3px"});               
+                    .css({"padding":"4px"});            
             }
         });
     };
