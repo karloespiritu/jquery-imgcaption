@@ -11,7 +11,7 @@
     $.fn.imgcaption = function(options) {
 
     var settings = $.extend({
-            backgroundColor: "#eee",
+            backgroundColor: "#ccc",
             textColor: "#333",
             fontSize: ".8em",
             fontStyle: "italic",
@@ -26,19 +26,15 @@
                 imgWidth = $this.width(); 
 
             $this.removeAttr('class'); 
-            $this.removeAttr('style'); 
+            //$this.removeAttr('style'); 
 
             if (caption) {
                 $figure = $this.wrap('<figure></figure>').parent(); 
                 $this.after('<figcaption>' + caption + '</figcaption>');
                 $figure
                     .css({
-                    "background-color" : settings.backgroundColor,    
+                       
                     "display" : "inline-block",
-                    "color": settings.textColor,
-                    "font-size": settings.fontSize,
-                    "font-style": settings.fontStyle,
-                    "text-align": "right",
                     "margin-bottom": "10px"})
                     .addClass(imgClass)
                     .attr('style', imgStyle)
@@ -46,7 +42,12 @@
                     .parent('p').before($figure); 
 
                 $("figcaption")
-                    .css({"padding":"4px"});            
+                    .css({"padding":"4px",
+                    "font-size": settings.fontSize,
+                    "font-style": settings.fontStyle,
+                    "text-align": "right",
+                    "color": settings.textColor,
+                    "background-color" : settings.backgroundColor});            
             }
         });
     };
