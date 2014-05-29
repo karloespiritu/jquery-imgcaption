@@ -11,10 +11,11 @@
     $.fn.imgcaption = function(options) {
 
     var settings = $.extend({
-            backgroundColor: "#ccc",
+            backgroundColor: "#fff",
             textColor: "#333",
-            fontSize: ".8em",
+            fontSize: ".82em",
             fontStyle: "italic",
+            lineHeight: "1rem"
     }, options);
 
         return this.each(function() { 
@@ -26,29 +27,30 @@
                 imgWidth = $this.width(); 
 
             $this.removeAttr('class'); 
-            //$this.removeAttr('style'); 
+            $this.removeAttr('style'); 
 
             if (caption) {
                 $figure = $this.wrap('<figure></figure>').parent(); 
                 $this.after('<figcaption>' + caption + '</figcaption>');
                 $figure
                     .css({
-                       
-                    "display" : "inline-block",
-                    "margin-bottom": "10px"})
+                    "display" : "inline-block"})
                     .addClass(imgClass)
-                    .attr('style', imgStyle)
+                    .attr("style", imgStyle)
                     .width(imgWidth)
                     .parent('p').before($figure); 
 
-                $("figcaption")
-                    .css({"padding":"4px",
+                $("figcaption").css({
+                    "margin": "0px",
+                    "padding": "5px", 
                     "font-size": settings.fontSize,
                     "font-style": settings.fontStyle,
+                    "line-height": settings.lineHeight,
                     "text-align": "right",
                     "color": settings.textColor,
-                    "background-color" : settings.backgroundColor});            
-            }
+                    "background-color": settings.backgroundColor
+                });            
+            } //check if data-caption is not empty 
         });
     };
 })(jQuery);
