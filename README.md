@@ -25,7 +25,7 @@ A simple image caption jQuery plugin
      });
   ```
   // or with options
-
+  ```
    $(window).load(function() {
        $('img[data-caption]').imgcaption({
         'backgroundColor': "#eee",
@@ -34,7 +34,7 @@ A simple image caption jQuery plugin
         'fontStyle': 'italic'
        });           
    });
-   
+  ```
 ## Available Options
 
 
