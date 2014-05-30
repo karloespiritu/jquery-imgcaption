@@ -33,19 +33,20 @@
                 $this.after("<figcaption>" + caption + "</figcaption>");
                 
                 $figure.css({
-                    "display" : "inline-block"})
+                    "display" : "inline-block"
+                    })
                     .addClass(imgClass)
                     .attr("style", imgStyle)
                     .width(imgWidth);
 
                 $("figcaption").css({
                     "margin": "0px",
-                    "padding": "5px", 
+                    "padding": "5px",
+                    "color": settings.textColor,
                     "font-size": settings.fontSize,
                     "font-style": settings.fontStyle,
                     "line-height": settings.lineHeight,
-                    "text-align": "right",
-                    "color": settings.textColor
+                    "text-align": "right"
                 });            
             } //check if data-caption is not empty 
         });
