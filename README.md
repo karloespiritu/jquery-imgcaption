@@ -1,11 +1,11 @@
 Image Caption jQuery Plugin
 ===========================
 
-jQuery.imgcaption is a simple, lightweight image caption plugin that allows you to easily display text captions to images using HTML5's `figure` and `figcaption` elements. 
+jQuery.imgcaption is a simple, lightweight image caption plugin that allows you to easily add and display text captions to images using HTML5's `figure` and `figcaption` elements. 
 
-Most image caption plugins available use the `alt` or the `title` attributes which don't seem to fit the function if you are placing a long description or source attibution for the image. The `title` attribute is displayed by browsers as tooltips while the `alt` attribute is used as alternative label of the image.
+Most image caption plugins available use the `alt` or the `title` attributes which don't seem to fit the function if you are placing a long description or source attibution of the image. The `title` attribute is displayed by browsers as tooltips while the `alt` attribute is used as alternative label of the image.
 
-The plugin uses a custom attribute, `data-caption`, to display caption to images.
+The plugin uses a custom attribute, `data-caption`, to display caption to images. To use the plugin, just add a `data-caption` custom attribute to all your `img` elements that require text captions.
 
 ## Usage
 
