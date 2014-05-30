@@ -11,7 +11,6 @@
     $.fn.imgcaption = function(options) {
 
     var settings = $.extend({
-            backgroundColor: "#fff",
             textColor: "#333",
             fontSize: ".82em",
             fontStyle: "italic",
@@ -46,8 +45,7 @@
                     "font-style": settings.fontStyle,
                     "line-height": settings.lineHeight,
                     "text-align": "right",
-                    "color": settings.textColor,
-                    "background-color": settings.backgroundColor
+                    "color": settings.textColor
                 });            
             } //check if data-caption is not empty 
         });
