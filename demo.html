@@ -43,14 +43,14 @@
         </p>
 
 <script src="jquery.min.js"></script>
-<script src="jquery.imgcaption.js"></script>
+<script src="jquery.imgcaption.min.js"></script>
 <script>
      $(window).load(function() {
-         $('img').imgcaption({
-          'backgroundColor': "#fff",
+         $('img[data-caption]').imgcaption({
           'textColor':'#333',
-          'fontSize': '0.8rem',
-          'fontStyle': 'italic'
+          'textAlign':'right',
+          'fontSize':'0.8rem',
+          'fontStyle':'italic'
          });           
      });
 </script>

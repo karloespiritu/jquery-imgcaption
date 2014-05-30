@@ -12,9 +12,10 @@
 
     var settings = $.extend({
             textColor: "#333",
+            textAlign: "right",
             fontSize: ".82em",
             fontStyle: "italic",
-            lineHeight: "1rem"
+
     }, options);
 
         return this.each(function() { 
@@ -45,8 +46,8 @@
                     "color": settings.textColor,
                     "font-size": settings.fontSize,
                     "font-style": settings.fontStyle,
-                    "line-height": settings.lineHeight,
-                    "text-align": "right"
+                    "line-height": "1rem",
+                    "text-align": settings.textAlign
                 });            
             } //check if data-caption is not empty 
         });
