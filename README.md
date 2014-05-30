@@ -20,10 +20,35 @@ A simple image caption jQuery plugin
 3. Call the plugin:
 
   ```javascript
-     $(function(){
-         $('img').imgcaption();           
+     $(window).load(function() {
+         $('img[data-caption]').imgcaption();           
      });
   ```
+  // or with options
+
+   $(window).load(function() {
+       $('img[data-caption]').imgcaption({
+        'backgroundColor': "#eee",
+        'textColor':'#444',
+        'fontSize': '0.8rem',
+        'fontStyle': 'italic'
+       });           
+   });
+   
+## Available Options
+
+
+  * `textColor`  {string}  default:`#333`  - The text color of text caption.
+  * `fontSize` {string}  default:`.82em`  - The font size.
+  * `fontStyle`  {string}  default:`italic`  - font style default.
+  * `lineHeight`  {string} default:`1rem`  - Line height default setting.
+
+
+Requirements
+------------
+
+jQuery is required, tested on 1.7+. 
+
 
 ## License
 
