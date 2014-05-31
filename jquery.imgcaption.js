@@ -30,6 +30,7 @@
             $this.removeAttr("style"); 
 
             if (caption) {
+                console.log("length = "+caption.length);
                 $figure = $this.wrap("<figure></figure>").parent(); 
                 $this.after("<figcaption>" + caption + "</figcaption>");
                 
