@@ -6,7 +6,10 @@
   "keywords": [
     "image",
     "caption",
-    "simple"
+    "simple",
+    "lightweight",
+    "html5",
+    "img"
   ],
   "author": {
     "name": "Karlo Espiritu",
@@ -15,7 +18,8 @@
   },
   "licenses": [
     {
-      "type": "MIT"
+      "type": "MIT",
+      "url": "https://github.com/karloespiritu/jquery-imgcaption/blob/master/License.md"
     }
   ],
   "homepage": "https://github.com/karloespiritu/jquery-imgcaption",
