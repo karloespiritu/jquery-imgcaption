@@ -2,7 +2,7 @@
   "name": "imgcaption",
   "version": "1.0.0",
   "title": "Image Caption jQuery Plugin",
-  "description": "A simple image caption jQuery plugin",
+  "description": "A simple, lightweight image caption plugin that allows you to easily add and display captions to images using HTML5's `figure` and `figcaption` elements",
   "keywords": [
     "image",
     "caption",

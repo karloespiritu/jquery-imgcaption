@@ -1,8 +1,8 @@
 {
   "name": "imgcaption",
   "version": "1.0.0",  
-  "title": "Image Caption - A simple Image Caption jQuery Plugin",
-  "description": "A simple image caption jQuery plugin.",
+  "title": "Image Caption - A Simple, Lightweight Image Caption jQuery Plugin",
+  "description": "A simple, lightweight image caption plugin that allows you to easily add and display captions to images using HTML5's `figure` and `figcaption` elements",
   "author": "Karlo Espiritu",
   "homepage": "https://github.com/karloespiritu/jquery-imgcaption/",
   "repository": {
