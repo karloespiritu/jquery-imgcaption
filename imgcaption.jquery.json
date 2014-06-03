@@ -23,6 +23,7 @@
     }
   ],
   "homepage": "https://github.com/karloespiritu/jquery-imgcaption",
+  "docs": "https://github.com/karloespiritu/jquery-imgcaption",
   "dependencies": {
     "jquery": ">=1.7"
   }
