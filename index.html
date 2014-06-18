@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Jquery Image Caption by karloespiritu</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Jquery Image Caption</h1>
+        <h2>A simple, lightweight image caption plugin that allows you to easily add and display captions to images using HTML5&#39;s `figure` and `figcaption` elements</h2>
+        <a href="https://github.com/karloespiritu/jquery-imgcaption" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="image-caption-jquery-plugin" class="anchor" href="#image-caption-jquery-plugin"><span class="octicon octicon-link"></span></a>Image Caption jQuery Plugin</h1>
+
+<p>jQuery.imgcaption is a simple, lightweight image caption plugin that allows you to easily add and display text captions to images using HTML5's <code>figure</code> and <code>figcaption</code> elements. </p>
+
+<p>Most image caption plugins available use the <code>alt</code> or the <code>title</code> attributes which don't seem to fit the function if you are placing a long description or source attibution of the image. The <code>title</code> attribute is displayed by browsers as tooltips while the <code>alt</code> attribute is used as alternative label of the image.</p>
+
+<p>The plugin uses a custom attribute, <code>data-caption</code>, to display caption to images. To use the plugin, just add a <code>data-caption</code> custom attribute to all your <code>img</code> elements that require text captions.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<ol>
+<li>
+<p>Include jQuery:</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</li>
+<li>
+<p>Include plugin's code:</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/jquery.imgcaption.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</li>
+<li>
+<p>Add <code>data-caption</code> custom attibute to <code>img</code> tags that needs caption</p>
+
+<pre><code>    &lt;img src="images\myimage.jpg" data-caption="My awesome image caption" alt="my image" title="My awesome image title"&gt;
+</code></pre>
+</li>
+<li>
+<p>Call the plugin:</p>
+
+<div class="highlight highlight-javascript"><pre>   <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+       <span class="nx">$</span><span class="p">(</span><span class="s1">'img[data-caption]'</span><span class="p">).</span><span class="nx">imgcaption</span><span class="p">();</span>           
+   <span class="p">});</span>
+</pre></div>
+
+<p>// or with options</p>
+
+<pre><code>$(window).load(function() {
+   $('img[data-caption]').imgcaption({
+    'textColor':'#333',
+    'textAlign':'right',
+    'fontSize':'0.8rem',
+    'fontStyle':'italic'
+   });           
+});
+</code></pre>
+
+<h2>
+<a name="available-options" class="anchor" href="#available-options"><span class="octicon octicon-link"></span></a>Available Options</h2>
+
+<ul>
+<li>
+<code>textColor</code>  {string}  default:<code>#333</code>  - The text color of text caption.</li>
+<li>
+<code>textAlign</code> {string} default:<code>right</code>  - The text alignment of the text caption. Possible values can be - <code>left</code>, <code>right</code>, or <code>center</code>.</li>
+<li>
+<code>fontSize</code> {string}  default:<code>.82em</code>  - The font size.</li>
+<li>
+<code>fontStyle</code>  {string}  default:<code>italic</code>  - font style default.</li>
+<li>
+<code>lineHeight</code>  {string} default:<code>1rem</code>  - Line height default setting.</li>
+</ul>
+</li>
+</ol><h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>jQuery is required, tested on 1.7+. </p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/karloespiritu/jquery-imgcaption/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/karloespiritu/jquery-imgcaption/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/karloespiritu/jquery-imgcaption"></a> is maintained by <a href="https://github.com/karloespiritu">karloespiritu</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
