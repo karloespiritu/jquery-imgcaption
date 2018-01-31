@@ -59,7 +59,6 @@ You can also customize the the text alignment of the image caption by adding an 
 ## Available Options
 
   * `textColor`  {string}  default:`#333`  - The text color of text caption.
-  * `textAlign` {string} default:`right`  - The text alignment of the text caption. Possible values can be - `left`, `right`, or `center`.
   * `fontSize` {string}  default:`.82em`  - The font size.
   * `fontStyle`  {string}  default:`italic`  - font style default.
   * `lineHeight`  {string} default:`1rem`  - Line height default setting.
