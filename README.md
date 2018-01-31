@@ -7,6 +7,18 @@ Most image caption plugins available use the `alt` or the `title` attributes whi
 
 The plugin uses a custom attribute, `data-caption`, to display caption to images. To use the plugin, just add a `data-caption` custom attribute to all your `img` elements that require text captions.
 
+You can also customize the the text alignment of the image caption by adding an optional `data-caption-align` attribute. Possible values are -- `left`, `right`, ot `center`. By default, this attribute is set to `left`.
+
+```html
+<img
+     src="https://source.unsplash.com/random/1440x600"
+     data-caption="My center-aligned image caption"
+     alt="My image"
+     title="My image title"
+     data-caption-align="center"
+>
+```
+
 ## Usage
 
 1. Include jQuery:
@@ -38,7 +50,6 @@ The plugin uses a custom attribute, `data-caption`, to display caption to images
    $(window).load(function() {
        $('img[data-caption]').imgcaption({
         'textColor':'#333',
-        'textAlign':'right',
         'fontSize':'0.8rem',
         'fontStyle':'italic'
        });
@@ -54,6 +65,10 @@ The plugin uses a custom attribute, `data-caption`, to display caption to images
   * `lineHeight`  {string} default:`1rem`  - Line height default setting.
 
 
+## Optional Attribute
+
+Use the optional attribute `data-caption-align` to change the text alignment of the image caption. Possible values are: `left`, `right`, or `center`. It defaults to `left` if not specified.
+
 ## Requirements
 
-jQuery is required, tested on 2.0+.
+jQuery is required, tested on 2.x or higher.
