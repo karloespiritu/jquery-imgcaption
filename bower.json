@@ -1,8 +1,0 @@
-{
-    "name" : "imgcaption",
-    "version" : "1.0.0",
-    "main" : ["jquery.imgcaption.js","jquery.imagecaption.min.js"],
-    "dependencies" : {
-        "jquery" : ">=1.7.0"
-    }
-}

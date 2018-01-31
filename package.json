@@ -1,20 +1,17 @@
 {
   "name": "imgcaption",
-  "version": "1.0.0",  
+  "version": "1.1.0",
   "title": "Image Caption - A Simple, Lightweight Image Caption jQuery Plugin",
   "description": "A simple, lightweight image caption plugin that allows you to easily add and display captions to images using HTML5's `figure` and `figcaption` elements",
   "author": "Karlo Espiritu",
   "homepage": "https://github.com/karloespiritu/jquery-imgcaption/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/karloespiritu/Bastard.git"
-  },  
-  "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-uglify": "~0.4.0"
+    "url": "https://github.com/karloespiritu/jquery-imgcaption.git"
   },
-  "scripts": {
-    "test": "grunt travis --verbose"
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-contrib-jshint": "0.11.0",
+    "grunt-contrib-uglify": "3.3.0"
   }
 }
