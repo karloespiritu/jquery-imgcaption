@@ -22,6 +22,7 @@
     return this.each(function () {
       var $this = $(this)
       var caption = $this.data('caption')
+      var captionAlignment = $this.data('caption-align')
       var imgClass = $this.attr('class')
       var imgStyle = $this.attr('style')
       var imgWidth = $this.width()
@@ -31,7 +32,11 @@
 
       if (caption) {
         $figure = $this.wrap('<figure></figure>').parent()
-        $this.after('<figcaption>' + caption + '</figcaption>')
+        $this.after(
+          '<figcaption>' +
+            caption +
+          '</figcaption>'
+        )
 
         $figure
           .css({
@@ -39,6 +44,7 @@
           })
           .addClass(imgClass)
           .attr('style', imgStyle)
+          .css('text-align', captionAlignment)
           .width(imgWidth)
 
         $('figcaption').css({
@@ -47,8 +53,7 @@
           color: settings.textColor,
           'font-size': settings.fontSize,
           'font-style': settings.fontStyle,
-          'line-height': '1rem',
-          'text-align': settings.textAlign
+          'line-height': '1rem'
         })
       } //check if data-caption is not empty
     })
